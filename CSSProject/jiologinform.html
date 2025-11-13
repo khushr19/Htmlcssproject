@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        *{
+            margin: 0;
+            box-sizing: border-box;
+            padding: 0;
+        }
+        body{
+            background-color: #020203;
+            height: 100vh;
+        }
+        #dialog-box{
+            width: 70%;
+            height: 73.5%;
+            /* margin: auto; */
+            /* display: flex; */
+            background-color: #16181f;
+            border-radius: 20px;
+        }
+        #main{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* display: flex; */
+        }
+        #left{
+            width: 50%;
+            height: 90%;
+            display: flex;
+            justify-content: center;
+            /* align-items: center; */
+            /* border: 1px solid white; */
+            
+        }
+        #right{
+            width: 50%;
+            height: 82%;
+            border-left: 1px solid #707a94;
+            /* display: flex;
+            justify-content: center;
+            align-items: center; */
+        }
+        #captcha{
+            width: 13.5%;
+            height: 29.5%;
+            border: 1px solid white;
+            border-radius: 20px;
+            /* margin-top: 10px; */
+            position: absolute;
+            top: 200px;
+            left: 340px;
+        }
+        #heading{
+            margin-top: 10px;
+            width: 100%;
+            height: 10%;
+            /* border: 1px solid red; */
+            /* display: flex;
+            justify-content: center; */
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        #heading h3{
+            font-size: 28px;
+            margin-bottom: 5px;
+        }
+        #heading p{
+            font-weight: 200;
+        }
+        #heading2{
+            position: absolute;
+            top: 400px;
+            font-weight: 200;
+            text-align: center;
+        }
+        #heading2 h4{
+            font-size: 20px;
+            margin-top: 10px;
+        }
+        #heading2 p{
+            /* margin-bottom: 5px; */
+            padding: 10px;
+        }
+        #maincontent{
+            height: 100%;
+            width: 100%;
+            display: flex;
+        }
+        #righttop,#rightbottom{
+            /* width: 100%; */
+            /* height: 50%; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #righttop{
+            height: 60%;
+            width: 100%;
+        }
+        #rightbottom{
+            height: 20%;
+            width: 20%;
+            font-weight: 200;
+            position: absolute;
+            top: 250px;
+            left: 790px;
+            font-size: 40px;
+            /* border: 1px solid red; */
+        }
+        @media (max-width: 768px) {
+
+  #dialog-box {
+    width: 80%;
+    height: 40%;
+    border-radius: 18px;
+    position: absolute;
+    left: 90px;
+  }
+
+  #captcha {
+    width: 20%;
+    height: 30%;
+    top: 100px;
+    left: 98px;
+    border-radius: 15px;
+  }
+
+  #heading h3 {
+    font-size: 24px;
+  }
+
+  #heading p {
+    font-size: 15px;
+    /* display: none; */
+  }
+
+  #heading2 {
+    top: 350px;
+    position: relative;
+    width: 80%;
+  }
+
+  #heading2 h4 {
+    font-size: 18px;
+    position: absolute;
+    top: -180px;
+  }
+
+  #heading2 p {
+    font-size: 14px;
+   /* position: absolute; */
+   display: none;
+  }
+
+  #right {
+    border-left: 1px solid #555;
+  }
+
+  #righttop div {
+    padding: 12px !important;
+    font-size: 14px;
+  }
+
+  #righttop input {
+    width: 170px !important;
+    padding: 12px !important;
+  }
+
+  #rightbottom {
+    width: 45%;
+    top: 170px;
+    left: 320px;
+    font-size: 14px;
+    /* bottom: 400px; */
+  }
+  #gethelp{
+    position: absolute;
+    top: -100px;
+    display: none;
+  }
+  #rightbottom p {
+    font-size: 13px;
+  }
+}
+@media (max-width: 414px) {
+
+  #dialog-box {
+    width: 80%;
+    height: 45%;
+    border-radius: 15px;
+    padding-top: 180px;
+    position: absolute;
+    left: 40px;
+  }
+
+  #maincontent {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #left, #right {
+    width: 100%;
+    height: auto;
+    border: none;
+  }
+
+  #captcha {
+    width: 40%;
+    height: 22%;
+    top: 130px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  #heading h3 {
+    font-size: 20px;
+  }
+
+  #heading p {
+    font-size: 13px;
+  }
+
+  #heading2 {
+    /* position: static; */
+    margin-top: 280px;
+  }
+
+  #heading2 h4 {
+    font-size: 16px;
+  }
+
+  #heading2 p {
+    font-size: 12px;
+  }
+
+  #righttop {
+    margin-top: 20px;
+  }
+
+  #righttop div {
+    padding: 10px !important;
+    font-size: 13px;
+  }
+
+  #righttop input {
+    width: 140px !important;
+    padding: 10px !important;
+  }
+
+  #rightbottom {
+    width: 85%;
+    position: static;
+    margin: 15px auto;
+    font-size: 12px;
+    text-align: center;
+  }
+
+  #rightbottom p {
+    font-size: 12px;
+  }
+  
+  #left{
+    display: none;
+  }
+  #dialog-box{
+    height: 50%;
+    padding-top: 100px;
+  }
+  #gethelp{
+    display: none;
+  }
+}
+    </style>
+</head>
+<body>
+    <div id="main">
+        <div id="dialog-box">
+            <div id="heading">
+                <h3 style="color: #e1e6f0; font-family: Arial, Helvetica, sans-serif;">Login or signup to continue</h3>
+                <p style="color: #8f9891; font-family: Arial, Helvetica, sans-serif;">Scan QR code or enter phone number to login</p>
+            </div>
+            <div id="maincontent">
+            <div id="left">
+                <div id="captcha"></div>
+                <div id="heading2">
+                    <h4 style="color: #e1e6f0; font-family: Arial, Helvetica, sans-serif;">Use Camera App to Scan QR</h4>
+                    <p style="color:  #8f9891; font-family: Arial, Helvetica, sans-serif;">Click on the link generated to <br> redirect to JioHotstar mobile app</p>
+                </div>
+            </div>
+            <div id="right"><div id="righttop">
+                <div style="display:flex;align-items:center;gap:5px;">
+                <div style="border:1px solid #555;border-radius:6px;padding:15px;color:#ccc;background:#1e1e1e;margin-bottom: 8px;">+91</div>
+                <input type="text" placeholder="Enter mobile number" 
+                style="border:1px solid #555;border-radius:6px;padding:16px;height: 30%; background:#1e1e1e;color:#ccc;width:200px;margin-bottom: 8px;">
+                </div></div><div id="rightbottom">
+                <p style="color:#ccc;font-size:14px;margin-top:4px;margin-bottom: 0px;">
+                By proceeding you confirm that you are above 18 years of age and agree to the 
+                <a href="#" style="color:#7aa2f7;text-decoration:none;">Privacy Policy</a> 
+                &amp; 
+                <a href="#" style="color:#7aa2f7;text-decoration:none;">Terms of Use</a>.
+                </p>
+                <p id="gethelp" style="color:#ccc;font-size:14px;margin-top:4px;margin-bottom: 0px;position: absolute;top: 230px;">
+                Having trouble logging in? 
+                <a href="#" style="color:#7aa2f7;text-decoration:none;">Get Help</a> 
+                </p></div>
+            </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

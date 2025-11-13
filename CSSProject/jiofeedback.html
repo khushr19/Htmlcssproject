@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        #main{
+            height: 100vh;
+            /* border: 1px solid black; */
+        }
+        #top{
+            height: 49%;
+            /* border: 1px solid red; */
+            background-color: #030614;
+            display: flex;
+            justify-content:end;
+            /* margin-left: 50px;
+            margin-right: 50px; */
+        }
+        #imgbg{
+            height: 75%;
+            width: 40%;
+            background-image: url(./feedback.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            margin-right: 50px;
+            margin-top: 60px;
+        }
+        #borderg{
+            width: 100%;
+            height: 1%;
+            /* border: 1px solid pink; */
+            background: linear-gradient(90deg, #007bff, #ff0066);
+        }
+        #topcontent{
+            width: 50%;
+            height: 100%;
+            /* border: 1px solid red; */
+            margin-left: 90px;
+            display: flex;
+            flex-direction: column;
+        }
+        #topcontent img{
+            margin-top: 30px;
+            margin-left: 20px;
+        }
+        /* #topcontent div{
+            width: 50%;
+            height: 5%;
+            border-radius: 10px;
+            border: 1p solid #1492ff;
+        } */
+         #search{
+            border: 1px solid #1492ff;
+            height: 14%;
+            margin-left: 21px;
+            margin-right: 24px;
+            /* display: flex;
+            justify-content:left; */
+            /* position: relative; */
+            padding-left: 40px;
+            padding-top: 15px;
+            /* font-size: 40px; */
+         }
+         #search img{
+            position: absolute;
+            top: 130px;
+            left: 100px;
+         }
+        #topcontent h1{
+            color: white;
+            margin-left: 30px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #section1{
+            height: 70%;
+            /* border: 1px solid red; */
+            display: flex;
+            justify-content: center;
+        }
+        #topcat,#topquery{
+            /* width: 35%; */
+            /* border: 1px solid blue; */
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #topcat{
+            width: 30%;
+        }
+        #topquery{
+            width: 50%;
+        }
+        #topcat p{
+            color: #140f11;
+            font-size: 24px;
+            font-weight: 500;
+            /* margin-top: 70px; */
+        }
+        #topquery p{
+            color: #140f11;
+            font-size: 24px;
+            font-weight: 500;
+            /* margin-top: 70px; */
+            padding-left: 30px;
+        }
+        #cat1,#cat2,#cat3,#cat4,#cat5{
+            border: 1px solid #cce3ff;
+            height: 13%;
+            width: 90%;
+            border-radius: 5px;
+            margin-bottom: 16px;
+            padding-left: 17px;
+            display: flex;
+            justify-content:baseline;
+            position: relative;
+        }
+        #cat1{
+            margin-top: 50px;
+        }
+        #topcat h4{
+            color: #1492ff;
+        }
+        #topcat img{
+            width: 13px;
+            height: 13px;
+            position: absolute;
+            top: 22px;
+            left: 350px;
+        }
+        #cat1:hover{
+            background-color: #f7faff;
+            /* color: #062c52; */
+        }
+        #cat1 h4:hover{
+            color: #1154a6;
+        }
+        #cat2:hover{
+            background-color: #f7faff;
+            /* color: #062c52; */
+        }
+        #cat2 h4:hover{
+            color: #1154a6;
+        }
+        #cat3:hover{
+            background-color: #f7faff;
+            /* color: #062c52; */
+        }
+        #cat3 h4:hover{
+            color: #1154a6;
+        }
+        #cat4:hover{
+            background-color: #f7faff;
+            /* color: #062c52; */
+        }
+        #cat4 h4:hover{
+            color: #1154a6;
+        }
+        #cat5:hover{
+            background-color: #f7faff;
+            /* color: #062c52; */
+        }
+        #cat5 h4:hover{
+            color: #1154a6;
+        }
+        #q1,#q2,#q3,#q4{
+            width: 90%;
+            height: 9%;
+            border-radius: 10px;
+            border-bottom: 1px solid #eeeeee;
+            /* margin-bottom: 8px; */
+            margin-left: 30px;
+            margin-top: 5px;
+            display: flex;
+            align-items: center;
+            font-size: 14px;
+            color: #7c797a;
+        }
+        #q5{
+            /* width: 90%;
+            height: 9%; */
+            border-radius: 10px;
+            /* border-bottom: 1px solid #eeeeee; */
+            /* margin-bottom: 8px; */
+            margin-left: 30px;
+            margin-top: 5px;
+            display: flex;
+            align-items: center;
+            font-size: 14px;
+            color: #7c797a;
+        }
+        #q1:hover{
+            background-color: #fafafa;
+        }
+        #q2:hover{
+            background-color: #fafafa;
+        }
+        #q3:hover{
+            background-color: #fafafa;
+        }
+        #q4:hover{
+            background-color: #fafafa;
+        }
+        #q5:hover{
+            background-color: #fafafa;
+        }
+        @media (max-width: 414px) {
+
+  /* Overall layout */
+  #main {
+    height: 100%t;
+  }
+
+  #top {
+    /* flex-direction: column-reverse;
+    align-items: center; */
+    height: 40%;
+    padding: 20px 0;
+  }
+  #topcontent{
+    width: 100%;
+    margin-left: 0px;
+  }
+  
+  #imgbg {
+    width: 80%;
+    height: 200px;
+    margin: 0 auto;
+    background-size: contain;
+    background-position: center;
+    margin-top: 0;
+
+  }
+  #search{
+    border: 2px solid pink;
+    height: fit-content;
+  }
+  #borderg {
+    height: 3px;
+  }
+
+  /* Section layout */
+  #section1 {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    border: none;
+    margin-top: 10px;
+  }
+
+  #topcat,
+  #topquery {
+    width: 90%;
+    margin-bottom: 30px;
+  }
+
+  #topcat p,
+  #topquery p {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  /* Categories */
+  #cat1, #cat2, #cat3, #cat4, #cat5 {
+    height: auto;
+    padding: 12px 15px;
+    font-size: 16px;
+    margin-bottom: 12px;
+  }
+
+  #topcat img {
+    left: auto;
+    right: 15px;
+    top: 20px;
+    width: 12px;
+    height: 12px;
+    /* display: none; */
+  }
+
+  #cat1 h4, #cat2 h4, #cat3 h4, #cat4 h4, #cat5 h4 {
+    font-size: 16px;
+  }
+
+  /* Queries */
+  #q1, #q2, #q3, #q4, #q5 {
+    width: 95%;
+    margin: 5px auto;
+    font-size: 13px;
+    line-height: 1.4em;
+    padding: 10px;
+  }
+
+}
+@media (max-width: 768px){
+    #imgbg{
+        display: none;
+    }
+    #topcat img{
+        display: none;
+    }
+    #topcontent{
+        position: absolute;
+        left: 0;
+        /* border: 1px solid red; */
+        padding-top: 50px;
+    }
+    #search{
+        height: 5%;
+        padding-top: 0px;
+        padding-left: 30px;
+        display: flex;
+        align-items: center;
+    }
+    #search img{
+            /* position: absolute; */
+            top: 220px;
+            left: 8px;
+         }
+}
+    </style>
+</head>
+<body>
+    <div id="main">
+        <div id="top">
+            <div id="topcontent">
+                <img src="./jio_hotstar_HelpDesk_586_123.png" width="200px">
+                <h1>How can we help you today?</h1>
+                <div id="search">
+                    <input type="text" placeholder="Search queries or error code" style="border: none;outline: none;background-color: #030614;" ><img src="./search_24dp_919295_FILL0_wght400_GRAD0_opsz24.png" width="30px" height="30px">
+                    <img src="./search_24dp_919295_FILL0_wght400_GRAD0_opsz24.png" width="30px" height="30px">
+                </div>
+            </div>
+            <div id="imgbg"></div>
+        </div>
+        <div id="borderg"></div>
+        <div id="section1">
+            <div id="topcat">
+                <p>Top Categories</p>
+                <div id="cat1">
+                    <h4>Subscriptions, Plans and Pricing</h4>
+                    <img src="./arrowright.png">
+                </div>
+                <div id="cat2">
+                    <h4>Accessing JioHotstar</h4>
+                    <img src="./arrowright.png">
+                </div>
+                <div id="cat3">
+                    <h4>Supported Devices</h4>
+                    <img src="./arrowright.png">
+                </div>
+                <div id="cat4">
+                    <h4>Our Features</h4>
+                    <img src="./arrowright.png">
+                </div>
+                <div id="cat5">
+                    <h4>Help with your account</h4>
+                    <img src="./arrowright.png">
+                </div>
+            </div>
+            <div id="topquery">
+                <p>Top Queries</p>
+                <div id="q1">JioHotstar subscription plans</div>
+                <div id="q2">I have done the recharge with JIO/Airtel/VI/BSNL but my JioHotstar subscription is not active.</div>
+                <div id="q3">I have paid already; why am I being asked to pay again?</div>
+                <div id="q4">I have a mobile plan but being asked to pay/upgrade when watching on TV</div>
+                <div id="q5">I’ve changed my phone number. How can I access my subscription?</div>
+            </div>
+        </div>
+        <div id="section2">
+        </div>
+    </div>
+</body>
+</html>
